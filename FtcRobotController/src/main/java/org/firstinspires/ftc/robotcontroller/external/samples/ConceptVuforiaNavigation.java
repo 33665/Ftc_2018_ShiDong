@@ -29,8 +29,8 @@
 
 package org.firstinspires.ftc.robotcontroller.external.samples;
 
-import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.RobotLog;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
@@ -79,7 +79,7 @@ import java.util.List;
  * is explained below.
  */
 
-@Autonomous(name="Concept: Vuforia Navigation", group ="Concept")
+@TeleOp(name = "Concept A")
 
 public class ConceptVuforiaNavigation extends LinearOpMode {
 
@@ -116,7 +116,7 @@ public class ConceptVuforiaNavigation extends LinearOpMode {
          * Once you've obtained a license key, copy the string from the Vuforia web site
          * and paste it in to your code onthe next line, between the double quotes.
          */
-        parameters.vuforiaLicenseKey = "ATsODcD/////AAAAAVw2lR...d45oGpdljdOh5LuFB9nDNfckoxb8COxKSFX";
+        parameters.vuforiaLicenseKey = "ATaQcIr/////AAAAGdCJtUO2N0qEqoxUGxoLYweDxTZ5Yyw7RQi4X3gIHNy9JplkuE6TMr/b0X3roI9QEi+bOfdwXscw214g4K9WLayv9cCbvGltw0gg6NHsdgyJGF4tUuE79FhKcECMCPtMDQmtFUgq1uxDy/BSeHQgjQMiuUBkHY/mjniKx2uXdB4bhKfVvPIxVxOMTioTL2mu9vPPDi1UEdkMdu3i0o/LJX6CaMzl3JvSI4db4HMdB6FA84bkOnQxWyZMI8+TpFACxqGfJibq5Aq9UhALz/5kRXezovxrW67Js1Jcxs6I9TdQj1zcVHe+RP5bxGUpl1L00UPLIhcmaZy238hyJO85KS3Pu49M+pHMYPCRG025MCay";
 
         /*
          * We also indicate which camera on the RC that we wish to use.
@@ -126,7 +126,7 @@ public class ConceptVuforiaNavigation extends LinearOpMode {
         parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
         this.vuforia = ClassFactory.createVuforiaLocalizer(parameters);
 
-        /**
+        /*
          * Load the data sets that for the trackable objects we wish to track. These particular data
          * sets are stored in the 'assets' part of our application (you'll see them in the Android
          * Studio 'Project' view over there on the left of the screen). You can make your own datasets
@@ -141,11 +141,11 @@ public class ConceptVuforiaNavigation extends LinearOpMode {
         VuforiaTrackable blueTarget  = stonesAndChips.get(1);
         blueTarget.setName("BlueTarget");  // Chips
 
-        /** For convenience, gather together all the trackable objects in one easily-iterable collection */
+        /* For convenience, gather together all the trackable objects in one easily-iterable collection */
         List<VuforiaTrackable> allTrackables = new ArrayList<VuforiaTrackable>();
         allTrackables.addAll(stonesAndChips);
 
-        /**
+        /*
          * We use units of mm here because that's the recommended units of measurement for the
          * size values specified in the XML for the ImageTarget trackables in data sets. E.g.:
          *      <ImageTarget name="stones" size="247 173"/>

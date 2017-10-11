@@ -64,7 +64,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
  * is explained in {@link ConceptVuforiaNavigation}.
  */
 
-@Autonomous(name="Concept: VuMark Id", group ="Concept")
+@Autonomous(name="Concept B")
 
 public class ConceptVuMarkIdentification extends LinearOpMode {
 
@@ -102,7 +102,7 @@ public class ConceptVuMarkIdentification extends LinearOpMode {
          * Once you've obtained a license key, copy the string from the Vuforia web site
          * and paste it in to your code onthe next line, between the double quotes.
          */
-        parameters.vuforiaLicenseKey = "ATsODcD/////AAAAAVw2lR...d45oGpdljdOh5LuFB9nDNfckoxb8COxKSFX";
+        parameters.vuforiaLicenseKey = "ATaQcIr/////AAAAGdCJtUO2N0qEqoxUGxoLYweDxTZ5Yyw7RQi4X3gIHNy9JplkuE6TMr/b0X3roI9QEi+bOfdwXscw214g4K9WLayv9cCbvGltw0gg6NHsdgyJGF4tUuE79FhKcECMCPtMDQmtFUgq1uxDy/BSeHQgjQMiuUBkHY/mjniKx2uXdB4bhKfVvPIxVxOMTioTL2mu9vPPDi1UEdkMdu3i0o/LJX6CaMzl3JvSI4db4HMdB6FA84bkOnQxWyZMI8+TpFACxqGfJibq5Aq9UhALz/5kRXezovxrW67Js1Jcxs6I9TdQj1zcVHe+RP5bxGUpl1L00UPLIhcmaZy238hyJO85KS3Pu49M+pHMYPCRG025MCay";
 
         /*
          * We also indicate which camera on the RC that we wish to use.
